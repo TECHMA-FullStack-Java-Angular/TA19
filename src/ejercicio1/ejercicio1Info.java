@@ -15,6 +15,8 @@ public class ejercicio1Info extends JFrame {
 
 	
 	public ejercicio1Info(String newValue) {
+		
+		//Creamos el panel
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 176);
 		contentPane = new JPanel();
@@ -23,11 +25,13 @@ public class ejercicio1Info extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		//Establecemos el texto con parte dinamica 
 		JLabel lblNewLabel = new JLabel("¡Hola "+ newValue+"!");
 		lblNewLabel.setBounds(148, 51, 128, 42);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		contentPane.add(lblNewLabel);
 		
+		//Activamos la visibilidad
 		setVisible(true);
 	}
 

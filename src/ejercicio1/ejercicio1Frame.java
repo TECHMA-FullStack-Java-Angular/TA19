@@ -28,6 +28,7 @@ public class ejercicio1Frame extends JFrame {
 	public ejercicio1Frame() {
 		
 		
+		//Creamos un JFrame
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -36,16 +37,19 @@ public class ejercicio1Frame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		//Añadimos un campo de texto
 		textField = new JTextField();
 		textField.setBounds(105, 122, 230, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
+		//añadimos un texto con indicaciones
 		JLabel lblNewLabel = new JLabel("Escribe un nombre para saludar");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel.setBounds(115, 67, 201, 30);
 		contentPane.add(lblNewLabel);
 		
+		//Añadimos un botón de saludación conectado con el listener
 		JButton btnSaludar = new JButton("¡Saludar!");
 		btnSaludar.addActionListener(aL);
 		
@@ -53,12 +57,17 @@ public class ejercicio1Frame extends JFrame {
 		btnSaludar.setBounds(181, 153, 89, 23);
 		contentPane.add(btnSaludar);
 		
+		//Activamos la visibilidad
 		setVisible(true);
 	}
+	//creamos el listener
 	ActionListener aL = new ActionListener()
 			{
 		public void actionPerformed(ActionEvent e) {
+			//llamamos al otro panel y recuperamos el texto 
 			ejercicio1Info info = new ejercicio1Info(textField.getText());
+			
+			//quitamos la visibilidad
 			setVisible(false);
 			
 		}
