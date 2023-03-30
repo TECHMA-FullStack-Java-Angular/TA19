@@ -4,7 +4,7 @@ public class Main1App {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
- ejercicio1 vista = new ejercicio1();
+ ejercicio1Frame vista = new ejercicio1Frame();
 	}
 
 }

@@ -19,13 +19,13 @@ import java.awt.event.ActionEvent;
  *   "Hola <texto escrito en el campo de texto>!".*/
 
 
-public class ejercicio1 extends JFrame {
+public class ejercicio1Frame extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
 
 	
-	public ejercicio1() {
+	public ejercicio1Frame() {
 		
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -58,7 +58,9 @@ public class ejercicio1 extends JFrame {
 	ActionListener aL = new ActionListener()
 			{
 		public void actionPerformed(ActionEvent e) {
-			System.out.println(textField.getText());
+			ejercicio1Info info = new ejercicio1Info(textField.getText());
+			setVisible(false);
+			
 		}
 			};
 }
