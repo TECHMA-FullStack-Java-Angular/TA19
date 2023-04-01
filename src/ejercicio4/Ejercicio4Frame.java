@@ -196,7 +196,7 @@ public class Ejercicio4Frame extends JFrame {
 			resultado.setText(String.format("%.2f", result));
 
 		} catch (NumberFormatException e) {
-			JOptionPane.showMessageDialog(null,"Esta operación no puede ser realizada: " + e.getMessage());
+			JOptionPane.showMessageDialog(null,"No has introducido un valor numerico: " + e.getMessage());
 		}
 //			        
 
