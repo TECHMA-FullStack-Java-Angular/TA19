@@ -9,12 +9,12 @@ import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Font;
 
-public class ejercicio1Info extends JFrame {
+public class Ejercicio1Info extends JFrame {
 
 	private JPanel contentPane;
 
 	
-	public ejercicio1Info(String newValue) {
+	public Ejercicio1Info(String newValue) {
 		
 		//Creamos el panel
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

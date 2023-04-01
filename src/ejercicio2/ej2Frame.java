@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import ejercicio1.ejercicio1Info;
+import ejercicio1.Ejercicio1Info;
 
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -16,7 +16,7 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class ej2Frame extends JFrame {
+public class Ej2Frame extends JFrame {
 
 	/**
 	 * 
@@ -30,7 +30,7 @@ public class ej2Frame extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ej2Frame() {
+	public Ej2Frame() {
 		setTitle("Películas");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 496, 300);

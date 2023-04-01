@@ -19,13 +19,13 @@ import java.awt.event.ActionEvent;
  *   "Hola <texto escrito en el campo de texto>!".*/
 
 
-public class ejercicio1Frame extends JFrame {
+public class Ejercicio1Frame extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
 
 	
-	public ejercicio1Frame() {
+	public Ejercicio1Frame() {
 		
 		
 		//Creamos un JFrame
@@ -66,7 +66,7 @@ public class ejercicio1Frame extends JFrame {
 			{
 		public void actionPerformed(ActionEvent e) {
 			//llamamos al otro panel y recuperamos el texto 
-			ejercicio1Info info = new ejercicio1Info(textField.getText());
+			Ejercicio1Info info = new Ejercicio1Info(textField.getText());
 			
 			//quitamos la visibilidad
 			setVisible(false);

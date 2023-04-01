@@ -8,7 +8,7 @@ public class Main2App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		ej2Frame frame = new ej2Frame();
+		Ej2Frame frame = new Ej2Frame();
 	}
 
 }
