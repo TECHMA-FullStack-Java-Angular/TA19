@@ -22,7 +22,7 @@ public class Main3App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		ej3Frame frame = new ej3Frame();
+		Ej3Frame frame = new Ej3Frame();
 	}
 
 }

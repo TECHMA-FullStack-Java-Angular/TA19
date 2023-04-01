@@ -9,64 +9,50 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 
-public class ej3Result extends JFrame {
+public class Ej3Result extends JFrame {
 
-	private JPanel contentPane;
-	private JTextField txtSo;
-	private JTextField txtEsp;
-	private JTextField textField_2;
-
-	ej3Frame seleccion = new ej3Frame();
-	
-	
-	
 	/**
-	 * Create the frame.
+	 * 
 	 */
-	public ej3Result() {
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	Ej3Frame seleccion = new Ej3Frame();
+	
+	
+	
+	//Creamos frame que recibe objeto encuesta
+	public Ej3Result(Encuesta encuesta) {
+		
+				
 		setTitle("Datos introducidos");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 666, 356);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		
 		JLabel lblNewLabel = new JLabel("¡Gracias por realizar la encuesta!");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblNewLabel.setBounds(105, 202, 331, 35);
+		lblNewLabel.setBounds(218, 252, 331, 35);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Has seleccionado como sistema operativo");
-		lblNewLabel_1.setBounds(53, 29, 296, 14);
-		contentPane.add(lblNewLabel_1);
+		//Insertamos un JLabel dinamico que recibe datos del objeto encuesta
+		JLabel lblSistemaOperativo = new JLabel("Has seleccionado como sistema operativo " + encuesta.getSistemaOperativo());
+		lblSistemaOperativo.setBounds(67, 45, 482, 14);
+		contentPane.add(lblSistemaOperativo);
 		
-		JLabel lblNewLabel_2 = new JLabel("La(s) especialidad(es) elegida(s) es/son: ");
-		lblNewLabel_2.setBounds(53, 83, 308, 35);
-		contentPane.add(lblNewLabel_2);
+		//Insertamos un JLabel dinamico que recibe datos del objeto encuesta unidos por una ', '
+		JLabel lblEspecialidades = new JLabel("La(s) especialidad(es) elegida(s) es/son: " + String.join(", ", encuesta.getEspecialidades()));
+		lblEspecialidades.setBounds(67, 101, 508, 35);
+		contentPane.add(lblEspecialidades);
 		
-		JLabel lblNewLabel_3 = new JLabel("Horas dedicadas en el ordenador: ");
-		lblNewLabel_3.setBounds(53, 160, 256, 14);
-		contentPane.add(lblNewLabel_3);
-		
-		txtSo = new JTextField();
-		txtSo.setText("so");
-		txtSo.setBounds(63, 54, 286, 20);
-		contentPane.add(txtSo);
-		txtSo.setColumns(10);
-		
-		txtEsp = new JTextField();
-		txtEsp.setText("esp");
-		txtEsp.setBounds(63, 116, 286, 20);
-		contentPane.add(txtEsp);
-		txtEsp.setColumns(10);
-		
-		textField_2 = new JTextField();
-		textField_2.setText("10");
-		textField_2.setBounds(240, 157, 109, 20);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		//Insertamos un JLabel dinamico que recibe datos del objeto encuesta
+		JLabel lblHorasDedicadas = new JLabel("Horas dedicadas en el ordenador: "+ encuesta.getHorasDedicadas());
+		lblHorasDedicadas.setBounds(67, 188, 256, 14);
+		contentPane.add(lblHorasDedicadas);
 		
 		setVisible(true);
 	}
