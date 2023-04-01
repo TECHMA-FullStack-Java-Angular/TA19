@@ -1,13 +1,10 @@
 package ejercicio3;
 
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
-import javax.swing.JTextField;
 
 public class Ej3Result extends JFrame {
 

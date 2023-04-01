@@ -1,12 +1,8 @@
 package ejercicio2;
 
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import ejercicio1.Ejercicio1Info;
 
 import javax.swing.JComboBox;
 import javax.swing.JLabel;

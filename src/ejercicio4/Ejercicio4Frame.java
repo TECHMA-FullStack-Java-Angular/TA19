@@ -8,14 +8,9 @@
 
 package ejercicio4;
 
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import ejercicio3.Ej3Frame;
-import ejercicio3.Ej3Result;
 
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -28,6 +23,10 @@ import javax.swing.JOptionPane;
 
 public class Ejercicio4Frame extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField operando1;
 	private JTextField operando2;
@@ -118,8 +117,7 @@ public class Ejercicio4Frame extends JFrame {
 		// agregamos listener al boton
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				setVisible(false);
-//				System.exit(0);
+				System.exit(0);
 
 			}
 		});
