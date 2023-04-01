@@ -28,20 +28,20 @@ public class Ejercicio4About extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("MiniCalculadora v1.0");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel.setBounds(142, 60, 202, 35);
-		contentPane.add(lblNewLabel);
+		JLabel lblTitulo = new JLabel("MiniCalculadora v1.0");
+		lblTitulo.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblTitulo.setBounds(142, 60, 202, 35);
+		contentPane.add(lblTitulo);
 		
-		JLabel lblNewLabel_1 = new JLabel("<html>La MiniCalculadora fue creada por Paula Sousa, haciendo uso de "
+		JLabel lblExplicacion = new JLabel("<html>La MiniCalculadora fue creada por Paula Sousa, haciendo uso de "
 				+ "la biblioteca  java swing  siguiendo los requisitos: <br> <br>- Realizar básicas: suma, resta, "
 				+ "multiplicacion y división; <br> - Usar 2 JTextField para los operandos y 1 para el resultado; "
 				+ "<br> - Usar 6 JButtons ( 4 para las operaciones, 1 para el about y otro para salir; <br> - Usar "
 				+ "4 JLabels para mostrar ciertos textos en la ventas. (He usado 1 más) </html>");
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1.setBounds(26, 142, 455, 245);
-		contentPane.add(lblNewLabel_1);
+		lblExplicacion.setHorizontalAlignment(SwingConstants.CENTER);
+		lblExplicacion.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblExplicacion.setBounds(26, 142, 455, 245);
+		contentPane.add(lblExplicacion);
 		setVisible(true);
 	}
 

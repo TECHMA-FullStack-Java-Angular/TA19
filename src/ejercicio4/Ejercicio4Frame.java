@@ -53,9 +53,10 @@ public class Ejercicio4Frame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
+		// Agregamos los campos de operandos
+
 		operando1 = new JTextField();
 		operando1.setBounds(63, 137, 125, 43);
-
 		contentPane.add(operando1);
 		operando1.setColumns(10);
 
@@ -64,12 +65,12 @@ public class Ejercicio4Frame extends JFrame {
 		operando2.setBounds(241, 137, 125, 43);
 		contentPane.add(operando2);
 
+		// Agregamos botones de suma, resta, división y multiplicacion
 		btnSuma.setFont(new Font("Tahoma", Font.PLAIN, 20));
-
 		btnSuma.setBounds(63, 251, 125, 43);
 		contentPane.add(btnSuma);
 
-		// agregar listeners a los botones
+		// agregamos listener al boton
 		btnSuma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calcular("+");
@@ -80,7 +81,7 @@ public class Ejercicio4Frame extends JFrame {
 		btnResta.setBounds(241, 254, 125, 37);
 		contentPane.add(btnResta);
 
-		// agregar listeners a los botones
+		// agregamos listener al boton
 		btnResta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calcular("-");
@@ -91,7 +92,7 @@ public class Ejercicio4Frame extends JFrame {
 		btnMultiplica.setBounds(63, 319, 125, 43);
 		contentPane.add(btnMultiplica);
 
-		// agregar listeners a los botones
+		// agregamos listener al boton
 		btnMultiplica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calcular("*");
@@ -102,20 +103,24 @@ public class Ejercicio4Frame extends JFrame {
 		btnDividir.setBounds(241, 319, 125, 43);
 		contentPane.add(btnDividir);
 
+		// agregamos listener al boton
 		btnDividir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calcular("/");
 			}
 		});
 
+		// Agregamos los botones de salir y about
 		btnSalir.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnSalir.setBounds(155, 503, 125, 43);
 		contentPane.add(btnSalir);
 
-		// agregar listeners a los botones
+		// agregamos listener al boton
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
+				setVisible(false);
+//				System.exit(0);
+
 			}
 		});
 
@@ -123,13 +128,16 @@ public class Ejercicio4Frame extends JFrame {
 		btnAbout.setBounds(10, 557, 88, 26);
 		contentPane.add(btnAbout);
 
-		// agregar listeners a los botones
+		// agregamos listener al boton
 		btnAbout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
+				// Llamamos al objeto about
 				Ejercicio4About about = new Ejercicio4About();
 			}
 		});
 
+		// Creamos los JLabels
 		JLabel lblNewLabel = new JLabel("Operando 1");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -154,6 +162,13 @@ public class Ejercicio4Frame extends JFrame {
 		lblNewLabel_1_1.setBounds(63, 40, 303, 36);
 		contentPane.add(lblNewLabel_1_1);
 
+		JLabel lblNewLabel_1_2 = new JLabel("Resultado de la operación");
+		lblNewLabel_1_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1_2.setBounds(63, 391, 303, 36);
+		contentPane.add(lblNewLabel_1_2);
+
+		// Creamos el campo del resultado
 		resultado = new JTextField();
 		resultado.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		resultado.setHorizontalAlignment(SwingConstants.TRAILING);
@@ -161,18 +176,19 @@ public class Ejercicio4Frame extends JFrame {
 		resultado.setBounds(63, 433, 303, 43);
 		contentPane.add(resultado);
 
-		JLabel lblNewLabel_1_2 = new JLabel("Resultado de la operación");
-		lblNewLabel_1_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1_2.setBounds(63, 391, 303, 36);
-		contentPane.add(lblNewLabel_1_2);
 		setVisible(true);
 
 	}
 
+	// Metodo para realizar las operaciones según el boton apretado y actualizar
+	// resultado
 	private void calcular(String operacion) {
 
+		// Lanzamos una excepcion en caso de que no inserte un valor numerico.
+		// En caso de division por 0 ya saldra resultado infinito
 		try {
+
+			// adaptamos los resultados a double
 			double operand1 = Double.parseDouble(operando1.getText());
 			double operand2 = Double.parseDouble(operando2.getText());
 			double result = 0.0;
@@ -193,12 +209,12 @@ public class Ejercicio4Frame extends JFrame {
 				break;
 			}
 
+			// Adaptamos el formato a String
 			resultado.setText(String.format("%.2f", result));
 
 		} catch (NumberFormatException e) {
-			JOptionPane.showMessageDialog(null,"No has introducido un valor numerico: " + e.getMessage());
+			JOptionPane.showMessageDialog(null, "No has introducido un valor numerico: " + e.getMessage());
 		}
-//			        
 
 	}
 
